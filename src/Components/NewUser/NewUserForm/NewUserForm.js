@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "../../Modal/Modal";
 import Button from "../../UI/Button/Button";
 import styles from "./NewUserForm.module.css";
@@ -43,7 +43,7 @@ const NewUserForm = function ({ onCollectUser }) {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <form onSubmit={submitHandler}>
         <div className={styles["new-user__controls"]}>
           <div className={styles["new-user__control"]}>
@@ -62,7 +62,7 @@ const NewUserForm = function ({ onCollectUser }) {
       <Modal visibility={modalVisibility} onModalClose={modalCloseHandler}>
         {modalData}
       </Modal>
-    </div>
+    </React.Fragment>
   );
 };
 

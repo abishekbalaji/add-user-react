@@ -1,9 +1,10 @@
+import React from "react";
 import Button from "../UI/Button/Button";
 import styles from "./Modal.module.css";
 
 const Modal = function ({ children, visibility, onModalClose }) {
   return (
-    <div>
+    <React.Fragment>
       <div className={`${styles.modal} ${!visibility && styles.hidden}`}>
         <button onClick={onModalClose} className={styles["close-modal"]}>
           &times;
@@ -19,7 +20,7 @@ const Modal = function ({ children, visibility, onModalClose }) {
       <div
         className={`${styles.overlay} ${!visibility && styles.hidden}`}
       ></div>
-    </div>
+    </React.Fragment>
   );
 };
 

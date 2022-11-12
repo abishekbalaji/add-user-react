@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "../UI/Card/Card";
 import NewUserForm from "./NewUserForm/NewUserForm";
 
@@ -12,11 +13,11 @@ const NewUser = function ({ addNewUser, users }) {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <Card>
         <NewUserForm onCollectUser={collectUserHandler} />
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
 

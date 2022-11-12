@@ -1,7 +1,6 @@
-import "./App.css";
 import User from "./Components/User/User";
 import NewUser from "./Components/NewUser/NewUser";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
   const usersArray = [
@@ -17,10 +16,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <React.Fragment>
       <NewUser addNewUser={addNewUser} users={users} />
       <User users={users} />
-    </div>
+    </React.Fragment>
   );
 }
 
